@@ -1,8 +1,8 @@
 
 const Login = () => {
   return (
-    <div className="hover:border">
-        <img  src="./login-pic.jpg" alt="" />
+    <div>
+        <img  src="./login-pic.jpg" alt="" className="cursor-pointer border-2 border-transparent hover:border-orange  rounded-full"/>
     </div>
   )
 }

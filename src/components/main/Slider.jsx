@@ -3,7 +3,7 @@
 const Slider = () => {
   return (
     <div>
-        <div className="flex flex-col items-center ml-52 mt-24">
+        <div className="flex flex-col items-center mt-24">
             <img src="./Shoes1.jpg" alt="" />
             <div className="flex">
                 <img className="m-4 rounded-[15px] hover:cursor-pointer hover:opacity-50" src="Shoes5.jpg" alt="" onClick={() => console.log("clicked")}/>

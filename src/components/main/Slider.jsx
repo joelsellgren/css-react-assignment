@@ -1,8 +1,13 @@
-
+import { useState } from "react"
 
 const Slider = () => {
 
-    
+  const slides = [
+    {public: '/images/Shoes2.jpg'},
+    {public: '/images/Shoes3.jpg'},
+    {public: '/images/Shoes4.jpg'},
+    {public: '/images/Shoes5.jpg'},
+  ]
 
   return (
     <div>

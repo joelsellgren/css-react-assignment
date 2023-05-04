@@ -31,21 +31,23 @@ const Slider = () => {
               src={largeSlides[activeLargeSlideIndex].src}
               className="rounded-[15px]"
               alt="Picture of shoes" />
-            <div className="flex">
+            <div className="flex gap-7 mt-[32px]">
                 {smallSlides.map((slide, index) => (
-                  <img
-                    key={index}
-                    className={`m-4 rounded-[15px] hover:cursor-pointer hover:opacity-50 ${
-                      activeSlideIndex === index && "opacity-50 border-2 border-orange"}`}
-                    src={slide.src}
-                    alt="Picture of shoes"
-                    onClick={() => handleSlideClick(index)}
-                  />
+                  <div key={index} className={`${activeSlideIndex === index && "border-2 border-orange rounded-[15px] "}`}>                 
+                    <img                      
+                      className={`rounded-[15px] hover:cursor-pointer hover:opacity-50 ${
+                        activeSlideIndex === index && "opacity-50"}`}
+                      src={slide.src}
+                      alt="Picture of shoes"
+                      onClick={() => handleSlideClick(index)}
+                    />
+                  </div>
                 ))}
             </div>
         </div>
     </div>
   )
 }
+
 
 export default Slider

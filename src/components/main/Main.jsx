@@ -1,5 +1,6 @@
 import Slider from "./Slider"
 import ProductDetails from "./ProductDetails"
+/* import ProductModal from "./ProductModal" */
 
 const Main = () => {
   return (

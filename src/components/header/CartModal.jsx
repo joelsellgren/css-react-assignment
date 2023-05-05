@@ -9,7 +9,7 @@ const CartModal = () => {
                 <h3 className="font-bold p-4 border-b-2 border-darkGrey/50">Cart</h3>
             </div>
             <div className="flex justify-center items-center h-[188px]">
-                <img className="rounded" src="public\images\Shoes1small.jpg" alt="" />
+                <img className="rounded" src="images\Shoes1small.jpg" alt="" />
                 <div className="flex flex-col m-6">
                     <p className="text-darkGrey font-semibold">Fall Limited Edition Sneakers</p> 
                     <div className="flex">
@@ -17,7 +17,7 @@ const CartModal = () => {
                         <p className="font-black">dynamic text</p>
                     </div>  
                 </div>
-                <img className="hover:cursor-pointer" src="public\images\Paperbin.jpg" alt="Paperbin" />
+                <img className="hover:cursor-pointer" src="images\Paperbin.jpg" alt="Paperbin" />
             </div>
             <div className="flex justify-center mb-8">
                 {/* Todo: Fix button text */}

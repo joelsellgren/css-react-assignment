@@ -4,11 +4,16 @@ const Slider = () => {
 
   const [activeSlideIndex, setActiveSlideIndex] = useState(0)
   const [activeLargeSlideIndex, setActiveLargeSlideIndex] = useState(0)
+/*   const [showModal, setShowModal] = useState(false) */
 
   const handleSlideClick = (index) => {
     setActiveSlideIndex(index)
     setActiveLargeSlideIndex(index)
   }
+
+  /* const toggleModal = () => {
+    setShowModal(!showModal)
+  } */
 
   const smallSlides = [
     {src: '/images/Shoes1.jpg'},
@@ -29,8 +34,9 @@ const Slider = () => {
         <div className="flex flex-col items-center mt-24">
             <img
               src={largeSlides[activeLargeSlideIndex].src}
-              className="rounded-[15px]"
-              alt="Picture of shoes" />
+              className="rounded-[15px] hover:cursor-pointer"
+              alt="Picture of shoes"
+              onClick={() => console.log("clicked")} />
             <div className="flex gap-7 mt-[32px]">
                 {smallSlides.map((slide, index) => (
                   <div key={index} className={`${activeSlideIndex === index && "border-2 border-orange rounded-[15px] "}`}>                 

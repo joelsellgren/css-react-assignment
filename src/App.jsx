@@ -1,5 +1,6 @@
 import Header from "./components/header/Header"
 import Main from "./components/main/Main"
+import ProductModal from "./components/main/ProductModal"
 
 function App() {
 
@@ -7,6 +8,7 @@ function App() {
     <div className="">
       <Header />
       <Main />
+      <ProductModal />
     </div>
   )
 }

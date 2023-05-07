@@ -1,4 +1,5 @@
 import Button from "../main/Button"
+import PropTypes from "prop-types"
 
 const CartModal = () => {
 
@@ -21,12 +22,16 @@ const CartModal = () => {
             </div>
             <div className="flex justify-center mb-8">
                 {/* Todo: Fix button text */}
-                <Button />
+                <Button buttonText={"Go to Checkout"}/>
             </div>
         </div>
     </div>
   )
 }
+
+CartModal.propTypes = {
+    buttonText: PropTypes.string,
+  };
 
 export default CartModal
 

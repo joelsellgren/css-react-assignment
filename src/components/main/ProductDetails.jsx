@@ -1,7 +1,11 @@
-import Button from "./Button"
+
 import Counter from "./Counter"
+import PropTypes from "prop-types"
+
 
 const ProductDetails = () => {
+
+
   return (
     <div>
         <div className="w-[445px] ml-32">
@@ -18,12 +22,17 @@ const ProductDetails = () => {
             <h4 className="text-darkGrey font-bold text-sm opacity-50 line-through">$250.00</h4>
             <div className="flex mt-8">
                 <Counter />
-                <Button />
             </div>
         </div>
         
     </div>
   )
 }
+
+ProductDetails.propTypes = {
+    buttonText: PropTypes.string,
+    updateCart: PropTypes.array,
+    setUpdateCart: PropTypes.func
+  };
 
 export default ProductDetails

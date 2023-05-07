@@ -1,6 +1,9 @@
 import { useState } from "react"
+import PropTypes from "prop-types"
 
-const Slider = () => {
+const Slider = (props) => {
+
+  const { setShowModal } = props;
 
   const [activeSlideIndex, setActiveSlideIndex] = useState(0)
   const [activeLargeSlideIndex, setActiveLargeSlideIndex] = useState(0)
@@ -10,10 +13,6 @@ const Slider = () => {
     setActiveSlideIndex(index)
     setActiveLargeSlideIndex(index)
   }
-
-  /* const toggleModal = () => {
-    setShowModal(!showModal)
-  } */
 
   const smallSlides = [
     {src: '/images/Shoes1.jpg'},
@@ -36,7 +35,7 @@ const Slider = () => {
               src={largeSlides[activeLargeSlideIndex].src}
               className="rounded-[15px] hover:cursor-pointer"
               alt="Picture of shoes"
-              onClick={() => console.log("clicked")} />
+              onClick={() => setShowModal(true)} />
             <div className="flex gap-7 mt-[32px]">
                 {smallSlides.map((slide, index) => (
                   <div key={index} className={`${activeSlideIndex === index && "border-2 border-orange rounded-[15px] "}`}>                 
@@ -54,6 +53,10 @@ const Slider = () => {
     </div>
   )
 }
+
+Slider.propTypes = {
+  setShowModal: PropTypes.func
+};
 
 
 export default Slider

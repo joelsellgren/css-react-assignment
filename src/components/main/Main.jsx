@@ -1,14 +1,23 @@
 import Slider from "./Slider"
 import ProductDetails from "./ProductDetails"
-/* import ProductModal from "./ProductModal" */
+import PropTypes from "prop-types"
 
-const Main = () => {
+const Main = (props) => {
+
+  const { setShowModal, updateCart, setUpdateCart } = props
+
   return (
     <div className="flex justify-center items-center">
-        <Slider />
-        <ProductDetails />
+        <Slider setShowModal={setShowModal} />
+        <ProductDetails updateCart={updateCart} setUpdateCart={setUpdateCart} />
     </div>
   )
 }
+
+Main.propTypes = {
+  setShowModal: PropTypes.func,
+  updateCart: PropTypes.array,
+  setUpdateCart: PropTypes.func
+};
 
 export default Main

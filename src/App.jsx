@@ -6,12 +6,13 @@ import { useState } from "react"
 function App() {
 
   const [showModal, setShowModal] = useState(false)
-  const [updateCart, setUpdateCart] = useState([])
+  const [count, setCount] = useState(0)
+  const [cartAmount, setCartAmount] = useState(0)
 
   return (
     <div>
-      <Header />
-      <Main setShowModal={setShowModal} updateCart={updateCart} setUpdateCart={setUpdateCart} />
+      <Header cartAmount={cartAmount} setCartAmount={setCartAmount} />
+      <Main setShowModal={setShowModal} count={count} setCount={setCount} cartAmount={cartAmount} setCartAmount={setCartAmount} />
       <ProductModal showModal={showModal} setShowModal={setShowModal} />
     </div>
   )

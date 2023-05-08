@@ -2,10 +2,10 @@ import PropTypes from "prop-types"
 
 const Button = (props) => {
 
-  const { buttonText, updateCart, count } = props;
+  const { buttonText, count, setCartAmount  } = props;
 
   const handleAddToCart = () => {
-    console.log(count)
+    setCartAmount(prevCount => prevCount + count)
   }
 
   return (
@@ -24,8 +24,8 @@ const Button = (props) => {
 
 Button.propTypes = {
   buttonText: PropTypes.string,
-  updateCart: PropTypes.array,
-  count: PropTypes.number
+  count: PropTypes.number,
+  setCartAmount: PropTypes.func
 };
 
 export default Button

@@ -3,8 +3,9 @@ import Counter from "./Counter"
 import PropTypes from "prop-types"
 
 
-const ProductDetails = () => {
+const ProductDetails = (props) => {
 
+  const { count, setCount, setCartAmount } = props
 
   return (
     <div>
@@ -21,7 +22,7 @@ const ProductDetails = () => {
             </div>
             <h4 className="text-darkGrey font-bold text-sm opacity-50 line-through">$250.00</h4>
             <div className="flex mt-8">
-                <Counter />
+                <Counter count={count} setCount={setCount} setCartAmount={setCartAmount} />
             </div>
         </div>
         
@@ -31,8 +32,9 @@ const ProductDetails = () => {
 
 ProductDetails.propTypes = {
     buttonText: PropTypes.string,
-    updateCart: PropTypes.array,
-    setUpdateCart: PropTypes.func
+    count: PropTypes.number,
+    setCount: PropTypes.func,
+    setCartAmount: PropTypes.func
   };
 
 export default ProductDetails

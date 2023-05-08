@@ -2,11 +2,12 @@ import Logo from "./Logo"
 import Navbar from "./Navbar"
 import Cart from "./Cart"
 import Login from "./Login"
+import PropTypes from "prop-types"
 
 
-const Header = () => {
+const Header = (props) => {
 
-
+  const { cartAmount, setCartAmount } = props;
 
   return (
     <div className="flex ml-40 mr-40 h-28 justify-between border-b-2 border-darkGrey/50">
@@ -15,11 +16,16 @@ const Header = () => {
             <Navbar />
         </div>
         <div className="flex items-center">
-            <Cart />
+            <Cart cartAmount={cartAmount} setCartAmount={setCartAmount} />
             <Login />
         </div>
     </div>
   )
+}
+
+Header.propTypes = {
+  cartAmount: PropTypes.number,
+  setCartAmount: PropTypes.func
 }
 
 

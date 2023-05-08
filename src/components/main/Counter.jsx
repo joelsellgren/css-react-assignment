@@ -1,9 +1,10 @@
 import Button from "./Button"
-import { useState } from "react"
+import PropTypes from "prop-types"
 
-const Counter = () => {
 
-  const [count, setCount] = useState(0)
+const Counter = (props) => {
+
+  const { count, setCount, setCartAmount } = props;
 
   const increment = () => {
     setCount(prevCount => prevCount + 1)
@@ -22,10 +23,16 @@ const Counter = () => {
             <button className="text-orange font-bold text-2xl w-1/3 h-full" onClick={increment}>+</button>
         </div>
         <div className="ml-2">
-          <Button buttonText={"Add to Cart"} count={count} />
+          <Button buttonText={"Add to Cart"} count={count} setCartAmount={setCartAmount} />
         </div>
     </div>
   )
 }
+
+Counter.propTypes = {
+  count: PropTypes.number,
+  setCount: PropTypes.func,
+  setCartAmount: PropTypes.func
+};
 
 export default Counter

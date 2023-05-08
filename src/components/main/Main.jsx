@@ -4,20 +4,21 @@ import PropTypes from "prop-types"
 
 const Main = (props) => {
 
-  const { setShowModal, updateCart, setUpdateCart } = props
+  const { setShowModal, count, setCount, setCartAmount  } = props
 
   return (
     <div className="flex justify-center items-center">
         <Slider setShowModal={setShowModal} />
-        <ProductDetails updateCart={updateCart} setUpdateCart={setUpdateCart} />
+        <ProductDetails count={count} setCount={setCount} setCartAmount={setCartAmount} />
     </div>
   )
 }
 
 Main.propTypes = {
   setShowModal: PropTypes.func,
-  updateCart: PropTypes.array,
-  setUpdateCart: PropTypes.func
+  count: PropTypes.number,
+  setCount: PropTypes.func,
+  setCartAmount: PropTypes.func
 };
 
 export default Main

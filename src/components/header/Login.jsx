@@ -1,8 +1,9 @@
+import login from "/images/login-pic.jpg"
 
 const Login = () => {
   return (
     <div>
-        <img  src="/images/login-pic.jpg" alt="" className="cursor-pointer border-2 border-transparent hover:border-orange  rounded-full"/>
+        <img  src={login} alt="" className="cursor-pointer border-2 border-transparent hover:border-orange  rounded-full"/>
     </div>
   )
 }

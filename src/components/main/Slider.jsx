@@ -1,19 +1,10 @@
-import Shoes1 from "/images/Shoes1.jpg"
-import Shoes2 from "/images/Shoes2.jpg"
-import Shoes3 from "/images/Shoes3.jpg"
-import Shoes4 from "/images/Shoes4.jpg"
-import Shoes1large from "/images/Shoes1large.jpg"
-import Shoes2large from "/images/Shoes2large.jpg"
-import Shoes3large from "/images/Shoes3large.jpg"
-import Shoes4large from "/images/Shoes4large.jpg"
 
 import { useState } from "react"
 import PropTypes from "prop-types"
 
-
 const Slider = (props) => {
 
-  const { setShowModal } = props;
+  const { setShowModal, smallSlides, largeSlides } = props;
 
   const [activeSlideIndex, setActiveSlideIndex] = useState(0)
   const [activeLargeSlideIndex, setActiveLargeSlideIndex] = useState(0)
@@ -24,19 +15,6 @@ const Slider = (props) => {
     setActiveLargeSlideIndex(index)
   }
 
-  const smallSlides = [
-    {src: Shoes1},
-    {src: Shoes2},
-    {src: Shoes3},
-    {src: Shoes4} 
-  ]
-
-  const largeSlides = [
-    {src: Shoes1large},
-    {src: Shoes2large},
-    {src: Shoes3large},
-    {src: Shoes4large} 
-  ]
 
   return (
     <div>
@@ -65,7 +43,9 @@ const Slider = (props) => {
 }
 
 Slider.propTypes = {
-  setShowModal: PropTypes.func
+  setShowModal: PropTypes.func,
+  smallSlides: PropTypes.object,
+  largeSlides: PropTypes.object
 };
 
 

@@ -14,7 +14,7 @@ export const smallSlides = [
     {src: Shoes4} 
   ]
 
-  export const largeSlides = [
+export const largeSlides = [
     {src: Shoes1large},
     {src: Shoes2large},
     {src: Shoes3large},

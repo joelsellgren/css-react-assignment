@@ -1,7 +1,7 @@
 import Slider from "./Slider"
 import ProductDetails from "./ProductDetails"
 import PropTypes from "prop-types"
-import { largeSlides, smallSlides } from "./content/sliderContent"
+import { largeSlides, smallSlides } from "./../../content/sliderContent"
 
 const Main = (props) => {
 

@@ -6,6 +6,11 @@ const Button = (props) => {
 
   const handleAddToCart = () => {
     setCartAmount(prevCount => prevCount + count)
+    window.gtag("event", "button_click", {
+      event_category: "interaction on add to cart",
+      event_label: "add to cart",
+      value: 1
+  });
   }
 
   return (
